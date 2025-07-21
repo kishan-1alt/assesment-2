@@ -1,0 +1,21 @@
+use school;
+create table teachers(T_id int primary key , T_Name varchar(50), T_subject varchar(50), Workload int, c_teacher varchar(50), Gender varchar(50), Sclass varchar(50));
+insert into teachers values(1,"Anita","Hindi",20,"Yes","F","VIII");
+insert into teachers values(2,"Aman","English",22,"Yes","M","VII");
+insert into teachers values(3,"Ruby","History",24,"No","F","VIII");
+insert into teachers values(4,"Seema","Hindi",20,"Yes","F","IX");
+select * from teachers;
+select * from teachers order by Workload asc;
+select * from teachers where Sclass = "VIII";
+select T_Name,T_subject from teachers;
+select T_Name,Workload from teachers where  T_subject = "Hindi";
+select max(workload) from teachers;
+select min(workload) from teachers;
+select * from teachers where Gender = "F" and Sclass = "VII";
+select sum(workload) from teachers;
+select * from teachers where  T_Name = "_e";
+select workload from teachers;
+
+select * from teachers where T_Name = "Anita" and T_Name = "Aman";
+select * from teachers where Sclass= "VIII" and Workload > 20;
+select T_Name,Sclass,Workload from teachers where workload > 20 and workload < 30;
